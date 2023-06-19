@@ -27,6 +27,7 @@ Learning paths are a sequence of courses that guide you through the training mat
 ### General
 
 -   [Building a Server-Side Application with InterSystems](https://learning.intersystems.com/course/view.php?id=967) - Learn to create new classes, work with objects, and run SQL queries using InterSystems ObjectScript, the built-in language for InterSystems products. _5h_
+    _class definition, object oriented programming, getting started, capstone exercise_
 -   [Deploying InterSystems IRIS in Containers and the Cloud](https://learning.intersystems.com/course/view.php?id=2141) - Use a scalable deployment strategy to add reliability to any InterSystems IRIS data platform implementation. In this learning path, see how to create cloud- and container-based deployments for InterSystems IRIS. First, outline your system and deployment specifications. Then, review examples of deployments and try your own to determine which approach is best for your system. _3h 15min_
 -   [InterSystems IRIS Management Basics](https://learning.intersystems.com/course/view.php?id=1825) - Learn the basics of InterSystems IRIS® data platform and the tools that help system administrators perform common tasks through the lifecycle of their products. _10h_
 
