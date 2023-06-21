@@ -1,0 +1,14 @@
+<div class="container">
+  <a [href]="course.url" target="_blank">
+    <p *ngIf="course.isLearningPath">
+      <i>Learning Path</i>
+    </p>
+    <h2>{{ course.name }}</h2>
+    <p>{{ course.description }}</p>
+    <p>{{ "Level: " + course.level }}</p>
+    <p>{{ "Duration: " + course.getDurationAsString() }}</p>
+    <p *ngIf="course.keywords != '' && course.keywords != ' '">
+      {{ "Keywords: " + course.keywords }}
+    </p>
+  </a>
+</div>
