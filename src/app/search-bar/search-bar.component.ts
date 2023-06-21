@@ -1,6 +1,5 @@
 import { Component, HostListener } from '@angular/core';
 import { CourseService } from '../service/course.service';
-import { Course } from 'src/utils/Course';
 
 @Component({
   selector: 'app-search-bar',
@@ -13,7 +12,7 @@ export class SearchBarComponent {
 
   constructor(private courseService: CourseService) {}
 
-  onSearchChange(): void {
+  search(): void {
     let lowerSearchValue = this.searchValue.toLowerCase();
     if (lowerSearchValue == 'pbonin') {
       window.location.href = 'https://philipp-bonin.com/';

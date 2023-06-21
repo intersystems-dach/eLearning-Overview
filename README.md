@@ -128,3 +128,5 @@ Learning paths are a sequence of courses that guide you through the training mat
 - **[HealthShare Patient Index Overview](https://learning.intersystems.com/course/view.php?id=2135)** - Explore HealthShare Patient Index tools like the Worklist, audit log, and Data Quality tool. Learn the basic principles for automated and manual activities and see how to successfully manage patient identities. **1h 30min** _ISC1004, MPI, EMPI, Worklist, Audit Log, Tuning, N.I.C.E Process, Thresholds, Rules, Search Panel_
 
 ---
+
+<!-- ng deploy --base-href=https://intersystems-dach.github.io/eLearning-Overview/ -->

@@ -5,10 +5,10 @@
     </p>
     <h2>{{ course.name }}</h2>
     <p>{{ course.description }}</p>
-    <p>{{ "Level: " + course.level }}</p>
-    <p>{{ "Duration: " + course.getDurationAsString() }}</p>
+    <p><i>Level: </i>{{ course.level }}</p>
+    <p><i>Duration: </i>{{ course.getDurationAsString() }}</p>
     <p *ngIf="course.keywords != '' && course.keywords != ' '">
-      {{ "Keywords: " + course.keywords }}
+      <i>Keywords: </i>{{ course.keywords }}
     </p>
   </a>
 </div>
