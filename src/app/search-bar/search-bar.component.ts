@@ -7,15 +7,24 @@ import { CourseService } from '../service/course.service';
   styleUrls: ['./search-bar.component.sass'],
 })
 export class SearchBarComponent {
-  searchValue: string = '';
-  noMatches: boolean = false;
+  searchValue = '';
 
   constructor(private courseService: CourseService) {}
 
+  clear(): void {
+    this.searchValue = '';
+    this.search();
+  }
+
+  @HostListener('document:keydown.enter', ['$event'])
   search(): void {
-    let lowerSearchValue = this.searchValue.toLowerCase();
-    if (lowerSearchValue == 'pbonin') {
-      window.location.href = 'https://philipp-bonin.com/';
+    const lowerSearchValue = this.searchValue.toLowerCase();
+    if (
+      lowerSearchValue == 'philipp' ||
+      lowerSearchValue == 'phil' ||
+      lowerSearchValue == 'bonin'
+    ) {
+      this.courseService.extra();
     }
     this.courseService.searchString = lowerSearchValue;
     this.courseService.filter();

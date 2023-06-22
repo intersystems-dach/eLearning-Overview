@@ -1,12 +1,15 @@
 .container
   border: 1px solid black
   border-radius: 10px
-  box-shadow: 2px 2px 2px rgba(0,0,0,0.2)
-  padding: 10px
-  width: 800px
-  transition: 0.3s
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3)
+  padding: 5px
+  width: 60%
+  transition: 0.1s
+  background: white
+  .marked
+    background: #00b6b0
   &:hover
-    box-shadow: 4px 4px 4px rgba(0,0,0,0.2)
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.5)
     scale: 1.01
 
   a
@@ -25,3 +28,15 @@
       margin: 5px 0
     h2
       text-align: center
+
+@media screen and (max-width: 600px)
+  .container
+    width: 90%
+    &:hover
+      box-shadow: 2px 2px 2px rgba(0,0,0,0.3)
+      scale: 1
+    p
+      font-size: 15px
+      margin: 3px 0
+    h2
+      font-size: 20px

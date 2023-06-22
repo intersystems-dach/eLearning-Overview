@@ -10,9 +10,6 @@
       *ngFor="let course of getCourseService().getCourseByCategory(category)"
     >
       <div class="courseContainer">
-        <!-- <a class="courseButton" [href]="course.url" target="_blank">{{
-          course.name
-        }}</a> -->
         <app-course [course]="course"></app-course>
       </div>
     </div>
