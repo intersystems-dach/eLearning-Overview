@@ -1,11 +1,13 @@
 <div class="filterBar">
   <select name="Type" [(ngModel)]="type">
     <option value="">Type</option>
+    <option value="">All</option>
     <option value="course">Course</option>
     <option value="learning path">Learning Path</option>
   </select>
   <select name="Category" [(ngModel)]="category">
     <option value="">Category</option>
+    <option value="">All</option>
     <option
       *ngFor="let category of getCourseService().categories"
       [value]="category"
@@ -15,6 +17,7 @@
   </select>
   <select name="Level" [(ngModel)]="level">
     <option value="">Level</option>
+    <option value="">All</option>
     <option
       *ngFor="let level of getCourseService().getLevels()"
       [value]="level"
@@ -24,6 +27,7 @@
   </select>
   <select name="Duration" [(ngModel)]="duration">
     <option value="">Duration</option>
+    <option value="">All</option>
     <option value="< 30 min">< 30 min</option>
     <option value="30 - 60 min">30 - 60 min</option>
     <option value="1 - 2 h">1 - 2 h</option>
