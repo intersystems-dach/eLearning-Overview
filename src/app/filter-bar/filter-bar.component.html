@@ -1,0 +1,37 @@
+<div class="searchBar">
+  <select name="Type" [(ngModel)]="type">
+    <option value="">Type</option>
+    <option value="course">Course</option>
+    <option value="learning path">Learning Path</option>
+  </select>
+  <select name="Category" [(ngModel)]="category">
+    <option value="">Category</option>
+    <option
+      *ngFor="let category of getCourseService().categories"
+      [value]="category"
+    >
+      {{ category }}
+    </option>
+  </select>
+  <select name="Level" [(ngModel)]="level">
+    <option value="">Level</option>
+    <option
+      *ngFor="let level of getCourseService().getLevels()"
+      [value]="level"
+    >
+      {{ level }}
+    </option>
+  </select>
+  <select name="Duration" [(ngModel)]="duration">
+    <option value="">Duration</option>
+    <option value="< 30 min">< 30 min</option>
+    <option value="30 - 60 min">30 - 60 min</option>
+    <option value="1 - 2 h">1 - 2 h</option>
+    <option value="2 - 4 h">2 - 4 h</option>
+    <option value="> 4 h">> 4 h</option>
+  </select>
+  <div class="buttons">
+    <button (click)="reset()">Reset</button>
+    <button (click)="apply()">Apply</button>
+  </div>
+</div>
