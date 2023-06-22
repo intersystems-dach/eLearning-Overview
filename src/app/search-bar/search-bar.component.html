@@ -1,5 +1,7 @@
-<div class="searchBar">
+<div [class]="'searchBar' + (searchValue === 'spin' ? ' spinner' : '')">
   <input type="text" placeholder="Search" [(ngModel)]="searchValue" />
-  <button (click)="search()">Search</button>
+  <div class="buttons">
+    <button (click)="clear()">Clear</button>
+    <button (click)="search()">Search</button>
+  </div>
 </div>
-<p class="noMatches" *ngIf="noMatches"><i>No matches</i></p>

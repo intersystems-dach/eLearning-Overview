@@ -3,12 +3,50 @@
     <p *ngIf="course.isLearningPath">
       <i>Learning Path</i>
     </p>
-    <h2>{{ course.name }}</h2>
-    <p>{{ course.description }}</p>
+    <h2>
+      <span
+        *ngFor="let word of course.name.split(' ')"
+        [class]="
+          word.toLowerCase().includes(getSearchString()) &&
+          getSearchString() !== '' &&
+          getSearchString() !== ' '
+            ? 'marked'
+            : ''
+        "
+      >
+        {{ word }}
+      </span>
+    </h2>
+    <p>
+      <span
+        *ngFor="let word of course.description.split(' ')"
+        [class]="
+          word.toLowerCase().includes(getSearchString()) &&
+          getSearchString() !== '' &&
+          getSearchString() !== ' '
+            ? 'marked'
+            : ''
+        "
+      >
+        {{ word }}
+      </span>
+    </p>
     <p><i>Level: </i>{{ course.level }}</p>
     <p><i>Duration: </i>{{ course.getDurationAsString() }}</p>
-    <p *ngIf="course.keywords != '' && course.keywords != ' '">
-      <i>Keywords: </i>{{ course.keywords }}
+    <p *ngIf="course.keywords !== '' && course.keywords !== ','">
+      <i>Keywords: </i>
+      <span
+        *ngFor="let word of course.keywords.split(' ')"
+        [class]="
+          word.toLowerCase().includes(getSearchString()) &&
+          getSearchString() !== '' &&
+          getSearchString() !== ' '
+            ? 'marked'
+            : ''
+        "
+      >
+        {{ word }}
+      </span>
     </p>
   </a>
 </div>

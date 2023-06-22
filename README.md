@@ -1,6 +1,6 @@
 <div align="center">
     <a href="https://learning.intersystems.com">
-        <img src="https://learning.intersystems.com/pluginfile.php/1/totara_core/logo/4162/InterSystemsLearningrgb.svg" width="30%">
+        <img src="src/assets/logo.svg" width="30%">
     </a>
     <h1>InterSystems Learning Overview</h1>
 </div>

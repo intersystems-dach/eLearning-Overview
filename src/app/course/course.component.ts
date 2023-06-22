@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Course } from 'src/utils/Course';
+import { CourseService } from '../service/course.service';
 
 @Component({
   selector: 'app-course',
@@ -6,5 +8,11 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./course.component.sass'],
 })
 export class CourseComponent {
-  @Input() course: any;
+  @Input() course!: Course;
+
+  constructor(private courseService: CourseService) {}
+
+  getSearchString(): string {
+    return this.courseService.searchString;
+  }
 }
