@@ -20,8 +20,13 @@
   <button
     *ngIf="getCourseService().courses.length > 0"
     class="exportButton"
-    (click)="export()"
+    (click)="exportMD()"
   >
     Export
   </button>
 </div>
+
+<app-export-notification
+  *ngIf="showExportNotification"
+  (closeNotification)="closeNotification()"
+></app-export-notification>

@@ -54,4 +54,20 @@ export class Course {
     `;
     return html;
   }
+  toMarkdown(headingNumber: number): string {
+    const heading = '#'.repeat(headingNumber);
+    const markdown = `
+
+${heading} [${this.name}](${this.url})
+
+${this.description}
+
+*Level:* ${this.level}
+
+*Duration:* ${this.getDurationAsString()}
+
+*Keywords:* ${this.keywords}
+    `;
+    return markdown;
+  }
 }

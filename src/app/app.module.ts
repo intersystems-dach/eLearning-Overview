@@ -10,9 +10,10 @@ import { MetaDataComponent } from './meta-data/meta-data.component';
 import { SelectionComponent } from './selection/selection.component';
 import { CourseComponent } from './course/course.component';
 import { FilterBarComponent } from './filter-bar/filter-bar.component';
+import { ExportNotificationComponent } from './export-notification/export-notification.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, SearchBarComponent, MetaDataComponent, SelectionComponent, CourseComponent, FilterBarComponent],
+  declarations: [AppComponent, HeaderComponent, SearchBarComponent, MetaDataComponent, SelectionComponent, CourseComponent, FilterBarComponent, ExportNotificationComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
