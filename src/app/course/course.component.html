@@ -1,4 +1,18 @@
 <div class="container">
+  <button
+    (click)="bookmark()"
+    *ngIf="!course.bookmarked"
+    class="bookmarkButton"
+  >
+    <img src="../../assets/bookmark.png" alt="bookmark" />
+  </button>
+  <button
+    (click)="unBookmark()"
+    *ngIf="course.bookmarked"
+    class="bookmarkButton"
+  >
+    <img src="../../assets/bookmark_filled.png" alt="unbookmark" />
+  </button>
   <a [href]="course.url" target="_blank">
     <p *ngIf="course.isLearningPath">
       <i>Learning Path</i>

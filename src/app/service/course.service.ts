@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Course } from 'src/utils/Course';
+import { LocalStorageService } from './local-storage.service';
 
 @Injectable({
   providedIn: 'root',
@@ -15,10 +16,16 @@ export class CourseService {
   levelFilter = '';
   durationFilter = '';
 
-  constructor() {
+  constructor(private localStorageService: LocalStorageService) {
     this.initCourses();
     this.courses = this.allCourses;
     this.categories = this.getCategories();
+    for (const bookmark of localStorageService.getBookmarks()) {
+      const course = this.allCourses.find((course) => course.name === bookmark);
+      if (course) {
+        course.bookmarked = true;
+      }
+    }
   }
 
   filter() {
@@ -54,6 +61,9 @@ export class CourseService {
   filterType(course: Course): boolean {
     if (this.typeFilter == '') {
       return true;
+    }
+    if (this.typeFilter === 'bookmarked') {
+      return course.bookmarked;
     }
     return course.isLearningPath == (this.typeFilter === 'learning path');
   }

@@ -14,4 +14,14 @@
       </div>
     </div>
   </div>
+  <p *ngIf="getCourseService().courses.length === 0" style="font-size: 20px">
+    <i>No matches</i>
+  </p>
+  <button
+    *ngIf="getCourseService().courses.length > 0"
+    class="exportButton"
+    (click)="export()"
+  >
+    Export
+  </button>
 </div>

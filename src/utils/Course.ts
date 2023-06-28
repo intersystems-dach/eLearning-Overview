@@ -6,7 +6,8 @@ export class Course {
   level: string;
   duration: number;
   keywords: string;
-  isLearningPath: boolean = false;
+  isLearningPath: boolean;
+  bookmarked: boolean;
 
   constructor(
     category: string,
@@ -16,7 +17,8 @@ export class Course {
     level: string,
     duration: number,
     keywords: string,
-    isLearningPath: boolean = false
+    isLearningPath = false,
+    bookmarked = false
   ) {
     this.category = category;
     this.name = name;
@@ -26,10 +28,11 @@ export class Course {
     this.duration = duration;
     this.keywords = keywords;
     this.isLearningPath = isLearningPath;
+    this.bookmarked = bookmarked;
   }
 
   getDurationAsString(): string {
-    let durationAsString: string = '';
+    let durationAsString = '';
     if (this.duration >= 60) {
       durationAsString = Math.floor(this.duration / 60) + 'h ';
     }
@@ -37,5 +40,18 @@ export class Course {
       durationAsString += (this.duration % 60) + 'min';
     }
     return durationAsString;
+  }
+
+  toHTML(headingNumber: number): string {
+    const html = `
+      <h${headingNumber}><a href="${this.url}">
+      ${this.name}
+      </a></h${headingNumber}>
+      <p>${this.description}</p>
+      <p><i>Level: </i>${this.level}</p>
+      <p><i>Duration: </i>${this.getDurationAsString()}</p>
+      <p><i>Keywords: </i>${this.keywords}</p>
+    `;
+    return html;
   }
 }

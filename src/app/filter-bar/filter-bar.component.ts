@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CourseService } from '../service/course.service';
-import { Course } from 'src/utils/Course';
 
 @Component({
   selector: 'app-filter-bar',
@@ -8,10 +7,10 @@ import { Course } from 'src/utils/Course';
   styleUrls: ['./filter-bar.component.sass'],
 })
 export class FilterBarComponent {
-  type: string = '';
-  category: string = '';
-  level: string = '';
-  duration: string = '';
+  type = '';
+  category = '';
+  level = '';
+  duration = '';
 
   constructor(private courseService: CourseService) {}
 
