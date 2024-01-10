@@ -785,7 +785,7 @@ export class CourseService {
       new Course(
         'Phil',
         'OwnObjectScriptExtension',
-        'https://github.com/phil1436/ownobjectscriptextension',
+        'https://github.com/cophilot/ownobjectscriptextension',
         'A Visual Studio Code extension that supplies tools for InterSystems ObjectScript.',
         'Beginner',
         1,
@@ -797,7 +797,7 @@ export class CourseService {
       new Course(
         'Phil',
         'OwnGitExtension',
-        'https://github.com/phil1436/owngitextension',
+        'https://github.com/cophilot/owngitextension',
         'A Visual Studio Code Extension that offers tools for working with GitHub projects.',
         'Beginner',
         1,
@@ -809,7 +809,7 @@ export class CourseService {
       new Course(
         'Phil',
         'OwnVscodeExtension',
-        'https://github.com/phil1436/ownvscodeextension',
+        'https://github.com/cophilot/ownvscodeextension',
         'Providing tools for Microsofts Visual Studio Code.',
         'Beginner',
         1,
@@ -821,7 +821,7 @@ export class CourseService {
       new Course(
         'Phil',
         'phil-online',
-        'https://github.com/phil1436/phil-online',
+        'https://github.com/cophilot/phil-online',
         ' A simple personal website to show my projects and stuff.',
         'Beginner',
         1,
@@ -833,7 +833,7 @@ export class CourseService {
       new Course(
         'Phil',
         'Petgram',
-        'https://github.com/phil1436/Petgram',
+        'https://github.com/cophilot/Petgram',
         'Just a social media platform for pets. You can upload your pets and share them with the world. You can also like and comment on other peoples pets.',
         'Beginner',
         1,
@@ -845,7 +845,7 @@ export class CourseService {
       new Course(
         'Phil',
         'Color-Chicken',
-        'https://github.com/phil1436/Color-Chicken',
+        'https://github.com/cophilot/Color-Chicken',
         'Be a feathered chameleon, master the hurdles in Color Chicken! ',
         'Beginner',
         1,
